@@ -19,12 +19,18 @@ import Dashboard from './components/customer/Dashboard';
 import Orders from './components/customer/Orders';
 import OrderSuccess from './components/OrderSuccess';
 import OrderFailure from './components/OrderFailure';
+import ChangePassword from './components/customer/ChangePassword';
+import WhishList from './components/customer/Whishlist';
+import Profile from './components/customer/Profile';
+import AddressList from './components/customer/AddressList';
+import AddAdress from './components/customer/AddAddress';
 
 function App() {
   return (
     <>
 
       <Header />
+      <main className='main-content'>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/categories' element={<Categories/>}/>
@@ -36,9 +42,15 @@ function App() {
         <Route path='/customer/login' element={<Login/>}/>
         <Route path='/customer/dashboard' element={<Dashboard/>}/>
         <Route path='/customer/orders' element={<Orders/>}/>
+        <Route path='/customer/whishlist' element={<WhishList/>}/>
+        <Route path='/customer/profile' element={<Profile/>}/>
+        <Route path='/customer/adresses' element={<AddressList/>}/>
+        <Route path='/customer/add-address' element={<AddAdress/>}/>
+        <Route path='/customer/change-password' element={<ChangePassword/>}/>
         <Route path='/order/success' element={<OrderSuccess/>}/>
         <Route path='/order/failure' element={<OrderFailure/>}/>
       </Routes>
+      </main>
       <Footer />
     </>
   );

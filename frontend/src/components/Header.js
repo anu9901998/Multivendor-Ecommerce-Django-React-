@@ -29,6 +29,18 @@ const Header = () => {
            
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Seller Panel
+          </a>
+          <ul class="dropdown-menu">
+            <li><Link class="dropdown-item" to="/customer/register">Register</Link></li>
+            <li><Link class="dropdown-item" to="/customer/login">Login</Link></li>
+            <li><Link class="dropdown-item" to="/customer/dashboard">Forgot Password</Link></li>
+            <li><Link class="dropdown-item" to="/customer/login">Dashboard</Link></li>
+           
+          </ul>
+        </li>
           <li className="nav-item">
             <Link className="nav-link" to='/checkout'>Cart{4}</Link>
           </li>

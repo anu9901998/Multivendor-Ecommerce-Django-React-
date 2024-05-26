@@ -16,7 +16,18 @@ class VendorDetailsSerializer(serializers.ModelSerializer):
         fields = ['id','user','address'] # which fields I want to show
         depth = 1  #it will show the whole user details as user is foreign key. I basically unfold user details
 
+#Vendor Serializer
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.ProductCategory
+        fields = ['id','title','detail']  # which fields I want to show
+        depth = 1    #it will show the whole user details
 
+class CategoryDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.ProductCategory
+        fields = ['id','title','detail'] # which fields I want to show
+        depth = 1  #it will show the whole user details as user is foreign key. I basically unfold user details
 
 #Product Serialiser        
 class ProductListSerializer(serializers.ModelSerializer):

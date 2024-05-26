@@ -17,6 +17,15 @@ class VendorDetails(generics.RetrieveUpdateDestroyAPIView): #RetrieveUpdateDestr
     queryset = models.Vendor.objects.all()
     serializer_class = serializers.VendorDetailsSerializer
 
+class CategoryList(generics.ListCreateAPIView): # ListCreateAPIView : Listing and creating Data
+    queryset = models.ProductCategory.objects.all()
+    serializer_class = serializers.CategorySerializer
+    #view level authentication
+    # permission_classes = [permissions.IsAuthenticated]
+
+class CategoryDetails(generics.RetrieveUpdateDestroyAPIView): #RetrieveUpdateDestroyAPIView : fetching updating and destroying single data
+    queryset = models.ProductCategory.objects.all()
+    serializer_class = serializers.CategoryDetailsSerializer
 
 class ProductList(generics.ListCreateAPIView): # ListCreateAPIView : Listing and creating Data
     queryset = models.Product.objects.all()
